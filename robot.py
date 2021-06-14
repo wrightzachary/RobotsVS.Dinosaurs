@@ -1,12 +1,15 @@
-class Robot:
-    def __init__(self, health, power_level):
-        self.health = health
-        self.power_level = power_level
-        print(f"Robot health is {health}")
-        print(f"Robot power is {power_level}")
+from weapon import Weapon
 
-    # def set_weapon(self):
-    #     self.weapon = "blaster"
-    #
-    # def set_weapon_power(self):
-    #     self.weapon_power = 80
+weapon = Weapon()
+
+class Robot:
+    def __init__(self, name):
+        self.name = name
+        self.power_level = 81
+        self.health = 100
+        self.weapon = "blaster"
+        self.weapon_power = 86
+
+    def robot_attributes(self):
+        print(f"My name is {self.name}, my power level is {self.power_level}, my health is at {self.health}"
+              f" my weapon is a {self.weapon} and the weapon power is {self.weapon_power}.")

@@ -1,3 +1,4 @@
 class Weapon:
     def __init__(self):
-        pass
+        self.weapon = "blaster"
+        self.weapon_power = 86
