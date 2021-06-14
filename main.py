@@ -1,3 +1,8 @@
 from battlefield import Battlefield
 
-battlefield = Battlefield()
+
+def run_game(args):
+    pass
+
+
+battlefield = Battlefield(run_game)
