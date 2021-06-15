@@ -25,9 +25,7 @@ class Battlefield:
             self.robo_team = fleet.robot[0].robot_attributes()
             self.robo_team = fleet.robot[1].robot_attributes()
             self.robo_team = fleet.robot[2].robot_attributes()
-
-    def battle(self):
-        pass
+            print('')
 
     def dinos_turn(self):
         pass

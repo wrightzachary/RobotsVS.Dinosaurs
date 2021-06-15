@@ -10,6 +10,7 @@ class Robot:
         self.health = 100
         self.weapon = "blaster"
         self.weapon_power = 86
+        self.attack = "galactic blast"
 
     def robot_attributes(self):
         print(f"My name is {self.name}, my power level is {self.power_level}, my health is at {self.health}"
