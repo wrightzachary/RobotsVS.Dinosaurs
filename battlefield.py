@@ -1,6 +1,7 @@
 from fleet import Fleet
 from herd import Herd
 
+
 class Battlefield:
     def __init__(self):
         self.herd = Herd()
@@ -16,12 +17,11 @@ class Battlefield:
         # End Game
         self.display_winners()
 
-
     def display_welcome(self):
         print("Welcome to Robots vs Dinosaurs! Only one side can win!")
 
     def battle(self):
-        while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0: # while both sides are still alive
+        while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0:
             self.dino_turn()
             if len(self.fleet.robots) > 0:
                 self.robo_turn()
@@ -37,8 +37,6 @@ class Battlefield:
         if self.fleet.robots[chosen_robot].health <= 0:
             print(f"{self.fleet.robots[chosen_robot]} has died")
             self.fleet.robots.remove(self.fleet.robots[chosen_robot])
-            # self.fleet.robots.pop(chosen_robot)
-
 
     def robo_turn(self):
         print("Choose the robot who will attack:")
@@ -51,7 +49,6 @@ class Battlefield:
         if self.herd.dinosaurs[chosen_dino].health <= 0:
             print(f"{self.herd.dinosaurs[chosen_dino]} has died")
             self.herd.dinosaurs.remove(self.herd.dinosaurs[chosen_dino])
-
 
     def show_dino_opponent_options(self):
         dino_index = 0
