@@ -1,15 +1,14 @@
 from dinosaur import Dinosaur
 
-
 class Herd:
     def __init__(self):
-        self.dinosaur = []
+        self.dinosaurs = []
         self.create_herd()
 
     def create_herd(self):
-        pterodactyl = Dinosaur("Pterodactyl")
-        tyrannosaurus = Dinosaur("Tyrannosaurus")
-        baryonyx = Dinosaur("Baryonyx")
-        self.dinosaur.append(pterodactyl)
-        self.dinosaur.append(tyrannosaurus)
-        self.dinosaur.append(baryonyx)
+        dino_one = Dinosaur("Tyrannosaurus rex", 15)
+        dino_two = Dinosaur("Allosaurus", 10)
+        dino_three = Dinosaur("Archaeopteryx", 15)
+        self.dinosaurs.append(dino_one)
+        self.dinosaurs.append(dino_two)
+        self.dinosaurs.append(dino_three)

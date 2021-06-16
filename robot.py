@@ -1,17 +1,17 @@
 from weapon import Weapon
 
-weapon = Weapon()
-
 
 class Robot:
-    def __init__(self, name):
+    def __init__(self, name, weapon_type, weapon_attack_power):
         self.name = name
-        self.power_level = 81
+        self.power_level = 100
         self.health = 100
-        self.weapon = "blaster"
-        self.weapon_power = 86
-        self.attack = "galactic blast"
+        self.weapon = Weapon(weapon_type, weapon_attack_power)
 
-    def robot_attributes(self):
-        print(f"My name is {self.name}, my power level is {self.power_level}, my health is at {self.health}"
-              f" my weapon is a {self.weapon} and the weapon power is {self.weapon_power}.")
+    def attack(self, dinosaur):
+        dinosaur.health -= self.weapon.attack_power
+        print(f"{self.name} attacks {dinosaur.type} with {self.weapon.type} for {self.weapon.attack_power} damage. New health is {dinosaur.health}.")
+
+
+    def __str__(self):
+        return self.name
